@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #003355;
+    color: white;
+}
+
+figure {
+    margin: 0;
+}
+
+header {
+    background-color: #005288;
+    border-bottom: 3px solid black;
+    padding: 0;
+    height: 110px;
+}
+
+.logo {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: auto;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.title {
+    width: 100%;
+}
+
+#map {
+    height: 50vh;
+    width: 90vw;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+#instructions {
+    max-width: 80%;
+}
+
+#selectedLocation {
+    display: none;
+    max-width: 90%;
+    padding: 10px;
+    margin: 5px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: white;
+}
+
+#weatherContainer {
+    display: none;
+    flex-wrap: wrap;
+    max-width: 90%;
+    padding: 10px;
+    margin: 5px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: white;
+}
+
+#nearestBreweriesContainer {
+    display: none;
+    flex-wrap: wrap;
+    max-width: 90%;
+    padding: 10px;
+    margin: 5px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: white;
+
+}
+
+.brew {
+    display: none;
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+
+    /* locatie border weghalen en 2 divjes naast elkaar zetten op grotere schermen */
+
+    #selectedLocation {
+        display: none;
+        max-width: 90%;
+        padding: 10px;
+        margin: 5px;
+        border-style: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #weatherContainer {
+        flex-direction: column;
+    }
+
+    #nearestBreweriesContainer {
+        flex-direction: column;
+    }
+
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) {
+
+    /* divjes mooiere ruimte geven */
+
+    #weatherContainer {
+        width: 45%;
+    }
+
+    #nearestBreweriesContainer {
+        width: 45%;
+    }
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 1600px) {
+
+    /* Het liefst zou ik hier de achtergrond van weathercontainer willen veranderen met een foto die het weer weergeeft, gekoppeld aan de response van de API, maar ik heb geen tijd meer om dat uit te zoeken hoe dat moet */
+
+    /* Bier icoontje laten zien en naast de lijst zetten */
+
+    .brew {
+
+        display: block;
+        width: 200px;
+        height: auto;
+        margin: auto;
+    }
+
+    #nearestBreweriesContainer {
+        flex-direction: row;
+    }
+
+
+    #nearestBreweries {
+        width: 50%;
+    }
+
+    .beerImg {
+
+        margin-left: 30px;
+
+    }
+
+}

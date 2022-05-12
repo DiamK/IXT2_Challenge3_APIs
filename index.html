@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Landing SpaceX</title>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+	<script src="scripts/main.js" defer></script>
+	<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header>
+		<figure>
+			<img class="logo" src="img/spaceX-logo.svg" alt="spaceX logo">
+		</figure>
+	</header>
+	<main>
+		<div class="flexContainer">
+			<div id="instructions">
+				<h2>Druk op de kaart voor informatie over de potentiële landingsplek</h2>
+			</div>
+			<div id="map"></div>
+			<div id="selectedLocation">
+			</div>
+			<div id="weatherContainer">
+				<h2 class="title">Weersomstandigheden:</h2>
+				<ul>
+					<li>Beschrijving: <span id="weatherDescription"></span></li>
+					<li>Temperatuur: <span id="weatherTemp"></span> °C</li>
+					<li>Druk: <span id="weatherPressure"></span> hPa</li>
+					<li>Luchtvochtigheid: <span id="weatherHumidity"></span> %</li>
+					<li>Zicht: <span id="weatherVisibility"></span> meter</li>
+					<li>Windsnelheid: <span id="weatherWindspeed"></span> m/s</li>
+				</ul>
+			</div>
+			<div id="nearestBreweriesContainer">
+				<h2 class="title">Dichtstbijzijnde bierbrouwerijen:</h2>
+				<ul id="nearestBreweries">
+				</ul>
+				<figure class="beerImg">
+					<img class="brew" src="img/undraw_beer_xg5f.svg" alt="beer icon">
+				</figure>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>
